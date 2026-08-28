@@ -5,7 +5,7 @@ ZemaxGPT is a domain-adapted language model for answering technical questions ab
 ## Highlights
 
 - **Base model:** Llama 3.2 3B Instruct
-- **Fine-tuning:** 4-bit QLoRA / LoRA with Unsloth, TRL, and PEFT
+- **Fine-tuning:** 4-bit QLoRA / LoRA with Unsloth and TRL
 - **Adapter:** rank 16, alpha 32, 97 MB Safetensors checkpoint
 - **Training data:** 763 instruction-response examples across seven technical categories
 - **Deployment:** designed for private local inference through Ollama
@@ -17,6 +17,7 @@ ZemaxGPT is a domain-adapted language model for answering technical questions ab
 | `Finetuned_Model/` | Final LoRA adapter, metadata, chat template, and Ollama Modelfile |
 | `zemax_opticstudio_finetune_dataset.jsonl` | Consolidated supervised fine-tuning dataset |
 | `dataset_parts/` | Source datasets and Python scripts used to generate/assemble training data |
+| `notebooks/` | Google Colab notebooks for training and GGUF conversion |
 | `requirements.txt` | Core packages used for model training and inference workflows |
 
 The large model artifact is versioned with **Git LFS**. Checkpoint folders and the exported 2 GB GGUF are deliberately excluded to keep this repository focused on the reproducible fine-tuning deliverable.
@@ -62,9 +63,8 @@ How do I enable Robust Ray Aiming in Zemax OpticStudio, and when should I use it
 
 ## Tech stack
 
-Python, PyTorch, Hugging Face Transformers, TRL, PEFT, Unsloth, LoRA/QLoRA, Safetensors, JSONL, Google Colab, Ollama, and Git LFS.
+Python, PyTorch, Hugging Face Transformers, Datasets, TRL, Unsloth, LoRA/QLoRA, Safetensors, JSONL, Google Colab, Ollama, and Git LFS.
 
 ## Notes
 
 This project is intended as a technical demonstration of domain-specific LLM fine-tuning. Model outputs should be validated against the applicable Zemax OpticStudio documentation and the installed ZOS-API version before use in production optical-design workflows.
-
