@@ -8,13 +8,13 @@ ZemaxGPT is a domain-adapted language model for answering technical questions ab
 - **Fine-tuning:** 4-bit QLoRA / LoRA with Unsloth and TRL
 - **Adapter:** rank 16, alpha 32, 97 MB Safetensors checkpoint
 - **Training data:** 763 instruction-response examples across seven technical categories
-- **Deployment:** designed for private local inference through Ollama
+- **Deployment:** converted to Q4_K_M GGUF and prepared for private local inference through Ollama
 
 ## Repository layout
 
 | Path | Purpose |
 | --- | --- |
-| `Finetuned_Model/` | Final LoRA adapter, metadata, chat template, and Ollama Modelfile |
+| `Finetuned_Model/` | Final LoRA adapter, inference metadata, and Ollama Modelfile |
 | `zemax_opticstudio_finetune_dataset.jsonl` | Consolidated supervised fine-tuning dataset |
 | `dataset_parts/` | Source datasets and Python scripts used to generate/assemble training data |
 | `notebooks/` | Google Colab notebooks for training and GGUF conversion |
