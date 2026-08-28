@@ -1,0 +1,22 @@
+# Office documents and planning artifacts
+*.xlsx
+*.xls
+*.pdf
+~$*
+
+# Exported full models and duplicate checkpoints
+ZemaxGPT/
+ZemaxGPT_Llama3.2_3B/
+create_excel_calculator.py
+generate_07_cot.py
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
